@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="h-16 bg-gray-500 shadow-lg shadow-[#adadad] flex items-center"></div>
+        {/* {children} */}
+        <main className="h-[calc(100%-64px)]">{children}</main>
+      </body>
     </html>
   );
 }
