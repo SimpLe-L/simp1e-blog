@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --basic-bg: #242629;
+  --basic-header: #16161a;
+  --basic-text: #fffffe;
+}
+
 body,
 html {
   height: 100%;
   width: 100%;
+  background: var(--basic-bg);
 }

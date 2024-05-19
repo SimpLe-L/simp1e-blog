@@ -22,14 +22,17 @@ const navList = [
 
 const Header = () => {
   return (
-    <div className="h-16 bg-gray-500 shadow-lg shadow-[#adadad] flex items-center">
-      {
-        navList.map(item => {
-          return <div className="p-[4px]" key={item.id}>
-            <Link href={item.path}>{item.name}</Link>
-          </div>
-        })
-      }
+    <div className="h-16 bg-[--basic-header] flex justify-center">
+      <div className="h-full flex items-center w-[920px] justify-between">
+        {
+          navList.map(item => {
+            return <div className="p-[4px]" key={item.id}>
+              <Link className="text-[--basic-text]" href={item.path}>{item.name}</Link>
+            </div>
+          })
+        }
+      </div>
+
     </div>
   )
 }

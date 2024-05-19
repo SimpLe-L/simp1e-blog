@@ -5,14 +5,12 @@
  * @LastEditors: liaolei
  * @LastEditTime: 2024-05-16 15:23:42
  */
-import Image from "next/image";
-// import HomePage from "@/homepage/page";
+import HomeIntroduce from "@/components/homeComps/index";
 
 export default function Home() {
   return (
-    <div className="h-full">
-      {/* <HomePage /> */}
-      home
+    <div className="h-full grid place-content-center">
+      <HomeIntroduce />
     </div>
   );
 }
