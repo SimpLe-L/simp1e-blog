@@ -1,6 +1,6 @@
 const DappPage = () => {
   return (
-    <div>DappPage</div>
+    <div className="w-full h-full">钱包</div>
   )
 }
 

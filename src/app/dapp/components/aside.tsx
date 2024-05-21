@@ -1,6 +1,8 @@
+import AsideComp from "@/components/dapp/sideBar"
+
 const AsideComponent = () => {
   return (
-    <div>AsideComponent</div>
+    <AsideComp />
   )
 }
 

@@ -32,7 +32,7 @@ const HomePage = () => {
         技术栈：<span className="text-[#7f5af0]">React</span>、<span className="text-[#2cb67d]">Vue</span>、<span className="text-[--basic-text]">TypeScript</span>...
       </span>
 
-      <span className="text-[#94a1b2] text-xl md:text-3xl tracking-widest animate-fade-up animate-ease-in-out"
+      <span className="text-[--secondry-text] text-xl md:text-3xl tracking-widest animate-fade-up animate-ease-in-out"
         style={{
           animationDelay: `${getDelay()}ms`,
         }}>
