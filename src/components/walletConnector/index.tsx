@@ -2,9 +2,20 @@
 
 import { IWallectConfig } from "@/types";
 import { useState } from "react";
+import WalletView from "./components/wallet-view";
+import { WagmiProvider } from 'wagmi';
+import { wagmiConfig } from './wagmi';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { WalletType } from "./hooks/context";
+import { NetworkType } from "@/utils/enum";
 
 const WalletConnector: React.FC<IWallectConfig> = ({ config }) => {
   const [visible, setVisible] = useState(false);
+  const queryClient = new QueryClient();
+
+  const [type, setType] = useState(NetworkType.EVM);
+  console.log("ttt");
+
   return (
     <>
       <div
@@ -15,22 +26,16 @@ const WalletConnector: React.FC<IWallectConfig> = ({ config }) => {
       </div>
       {
         visible
-          ?
-          <div className="fixed z-999 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-2xl flex flex-col gap-2">
-            <div className="flex">
-              <span className="">Ethereum network</span>
-              <div className="flex flex-wrap gap-1">
-              </div>
-            </div>
-            <div className="flex">
-              <span className="">BitCoin network</span>
-            </div>
-          </div>
-          :
-          null
+        &&
+        <WalletType.Provider value={{ type: type }}>
+          <WagmiProvider config={wagmiConfig}>
+            <QueryClientProvider client={queryClient}>
+              <WalletView />
+            </QueryClientProvider>
+          </WagmiProvider>
+        </WalletType.Provider>
       }
     </>
-
   )
 }
 

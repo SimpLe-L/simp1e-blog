@@ -3,7 +3,7 @@ export interface IMenuItem {
   icon?: JSX.Element;
   title: string;
 }
-
+type WalletType = "evm" | "btc";
 export interface IWallectConfig {
   config: {
     text?: string
