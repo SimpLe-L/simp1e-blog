@@ -13,8 +13,7 @@ const WalletConnector: React.FC<IWallectConfig> = ({ config }) => {
   const [visible, setVisible] = useState(false);
   const queryClient = new QueryClient();
 
-  const [type, setType] = useState(NetworkType.EVM);
-  console.log("ttt");
+  const [type, setType] = useState(config.type);
 
   return (
     <>

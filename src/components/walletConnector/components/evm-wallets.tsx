@@ -1,8 +1,16 @@
-const EvmWallets = () => {
+import { useAccount } from 'wagmi';
+import AccountInfo from './evmWallect/account-info';
+import SelectWallet from './evmWallect/select-wallet';
 
+const EvmWallets = () => {
+  const { isConnected } = useAccount();
   return (
     <div>
-      EvmWallets
+      {
+        isConnected
+          ? <AccountInfo />
+          : <SelectWallet />
+      }
     </div>
   )
 }

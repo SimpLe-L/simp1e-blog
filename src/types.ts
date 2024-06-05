@@ -4,8 +4,10 @@ export interface IMenuItem {
   title: string;
 }
 type WalletType = "evm" | "btc";
+export interface IConfig {
+  text?: string,
+  type: WalletType
+}
 export interface IWallectConfig {
-  config: {
-    text?: string
-  }
+  config: IConfig
 }

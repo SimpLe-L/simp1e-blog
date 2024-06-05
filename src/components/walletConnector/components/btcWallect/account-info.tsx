@@ -1,0 +1,31 @@
+import { formatAddress } from "@/utils";
+import { BtcTypes } from "@/utils/enum";
+
+const AccountInfo = ({ accountInfo }: { accountInfo: { type: string, addr: string } }) => {
+
+  const disconnect = () => {
+
+  }
+
+  return (
+    <div className="flex justify-between items-center flex-col p-[20px] bg-white rounded-xl">
+      <div className="flex flex-col items-center gap-[8px] mb-[8px]">
+        <div className="flex flex-col gap-[4px]">
+          {accountInfo.addr && (
+            <div className="font-normal whitespace-nowrap text-center">
+              {formatAddress(accountInfo.addr)}
+            </div>
+          )}
+          <div className="text-[12px] opacity-[0.7] font-normal">
+            已链接 {accountInfo.type == BtcTypes.OKX ? "Okx Wallet" : "Unisat Wallet"} 钱包
+          </div>
+        </div>
+      </div>
+      <button className="bg-[#646cff] border-solid border border-[#646cff] text-white font-medium text-[14px] h-[38px] px-[20px] py-0 rounded-md transition" onClick={() => disconnect} type="button">
+        Disconnect
+      </button>
+    </div>
+  )
+}
+
+export default AccountInfo;

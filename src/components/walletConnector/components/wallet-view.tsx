@@ -11,7 +11,7 @@ const WalletView = () => {
   const { type } = useContext(WalletType);
 
   return (
-    <div>
+    <div className="fixed z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-[20px] rounded-2xl flex">
       {
         type == NetworkType.EVM
           ?
