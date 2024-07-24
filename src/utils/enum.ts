@@ -1,3 +1,10 @@
+export enum WallectTypes {
+  ETH = "eth",
+  BTC = "btc",
+  SOL = "solana"
+}
+
+
 export enum NetworkType {
   EVM = "evm",
   BTC = "btc"
