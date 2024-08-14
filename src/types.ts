@@ -11,3 +11,12 @@ export interface IConfig {
 export interface IWallectConfig {
   config: IConfig
 }
+
+export interface INftProperties {
+  owner: `0x${string}`;
+  tokenId: bigint;
+  level: number;
+  faId: bigint;
+  moId: bigint;
+  uri: string;
+}

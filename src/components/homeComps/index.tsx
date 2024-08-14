@@ -1,4 +1,5 @@
 import Typewriter from "./typewriter"
+import { Button } from "@/components/ui/button"
 
 const HomePage = () => {
   let delay = 0;
@@ -40,8 +41,8 @@ const HomePage = () => {
       </span>
 
       <div className="animate-fade-up animate-ease-in-out flex gap-[8px]" style={{ animationDelay: `${getDelay()}ms` }}>
-        <div className="p-[8px] text-[--basic-text] border-[1px] border-[#adadad] rounded-lg cursor-pointer hover:bg-[#94a1b2]">github</div>
-        <div className="p-[8px] text-[--basic-text] border-[1px] border-[#adadad] rounded-lg cursor-pointer hover:bg-[#94a1b2]">about</div>
+        <Button variant="outline">github</Button>
+        <Button variant="outline">about</Button>
       </div>
     </div>
   )

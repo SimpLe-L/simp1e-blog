@@ -5,9 +5,9 @@ import { combine } from "@/utils"
 import EthereumWallect from "./EthereumWallect/EthereumWallect"
 import SolanaWallect from "./SolanaWallect/SolanaWallect"
 import BitcoinWallect from "./BitcoinWallect/BitcoinWallect"
-import { WagmiProvider } from 'wagmi';
-import { wagmiConfig } from './EthereumWallect/wagmi';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+// import { WagmiProvider } from 'wagmi';
+// import { wagmiConfig } from './EthereumWallect/wagmi';
+// import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BtcConnectorProvider } from './BitcoinWallect/connector/index';
 import { SolConnectorProvider } from './SolanaWallect/connector/index';
 const wallectTabs = [
@@ -28,7 +28,7 @@ const wallectTabs = [
 const WalletView = ({ onHidden }: { onHidden: () => void }) => {
 
   const [activeTab, setActiveTab] = useState(WallectTypes.ETH);
-  const queryClient = new QueryClient();
+  // const queryClient = new QueryClient();
   const handleTabClick = (type: WallectTypes) => {
     // 更新选中标签的索引
     setActiveTab(type);
@@ -40,11 +40,12 @@ const WalletView = ({ onHidden }: { onHidden: () => void }) => {
   const renderWallet = () => {
     switch (activeTab) {
       case WallectTypes.ETH:
-        return <WagmiProvider config={wagmiConfig}>
-          <QueryClientProvider client={queryClient}>
-            <EthereumWallect />
-          </QueryClientProvider>
-        </WagmiProvider>;
+        // return <WagmiProvider config={wagmiConfig}>
+        //   <QueryClientProvider client={queryClient}>
+        //     <EthereumWallect />
+        //   </QueryClientProvider>
+        // </WagmiProvider>;
+        return <EthereumWallect />;
       case WallectTypes.SOL:
         return <SolConnectorProvider>
           <SolanaWallect />

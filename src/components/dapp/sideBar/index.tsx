@@ -34,7 +34,7 @@ const menuList = [
 
 const SideBar = () => {
   return (
-    <div className="p-[20px]">
+    <div className="p-[20px] h-full border-solid border-r border-[#2e374a]">
       <div>
         {menuList.map((menu) => (
           <div key={menu.menuName} className="flex flex-col gap-2">

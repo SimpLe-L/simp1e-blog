@@ -8,7 +8,6 @@ const SelectWallet = () => {
 
   const { connectors, connect } = useConnect();
   const { chains, switchChain } = useSwitchChain();
-  console.log("rrrr", chains);
 
   const chainId = useChainId();
 

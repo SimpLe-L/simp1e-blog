@@ -4,7 +4,7 @@ import { NetworkType } from "@/utils/enum";
 
 const walletConfig: IConfig = {
   text: "CONNECT",
-  type: NetworkType.BTC
+  type: NetworkType.EVM
 }
 
 const DappPage = () => {

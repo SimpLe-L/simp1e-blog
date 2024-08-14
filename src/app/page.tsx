@@ -9,7 +9,7 @@ import HomeIntroduce from "@/components/homeComps/index";
 
 export default function Home() {
   return (
-    <div className="h-full grid place-content-center">
+    <div className="h-[calc(100vh-64px)] grid place-content-center">
       <HomeIntroduce />
     </div>
   );

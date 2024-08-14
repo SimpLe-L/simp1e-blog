@@ -8,8 +8,9 @@
 import AsideComponent from "./components/aside";
 
 const DappLayout = ({ children }: { children: React.ReactNode }) => {
+
   return (
-    <div className="flex h-full">
+    <div className="flex h-[calc(100vh-64px)]" >
       <div className="flex-[1]">
         <AsideComponent />
       </div>

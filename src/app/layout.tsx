@@ -10,7 +10,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/header/header";
-
+import WagmiConfigProvider from "@/utils/WagmiConfigProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -27,7 +27,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main className="h-[calc(100%-64px)]">{children}</main>
+        <main>
+          <WagmiConfigProvider>
+            {children}
+          </WagmiConfigProvider>
+        </main>
       </body>
     </html>
   );
