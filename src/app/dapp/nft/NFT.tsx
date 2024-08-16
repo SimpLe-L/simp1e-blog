@@ -1,26 +1,35 @@
-import Image from "next/image";
 import { cn } from "@/lib/utils"
 import {
   Card,
   CardContent,
-  CardDescription,
-  // CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Checkbox } from "@/components/ui/checkbox"
 import { INftProperties } from '@/types';
 interface ICardProp {
-  data: INftProperties
+  data: INftProperties,
+  handleNftCheck: (tokenId: bigint, value: boolean) => void
 }
 
 const resetAddress = (owner: string) => `${owner.slice(0, 4)}...${owner.slice(38)}`;
 
-export function NFTCard({ data }: ICardProp) {
+export function NFTCard({ data, handleNftCheck }: ICardProp) {
+  const valueChange = (value: boolean) => {
+    handleNftCheck(data.tokenId, value);
+  }
   return (
-    <Card className={cn("w-[260px]")}>
-      <CardHeader>
-        <CardTitle className="text-white"> #{String(data.tokenId)}</CardTitle>
-        {/* <CardDescription>You have 3 unread messages.</CardDescription> */}
+    <Card className={cn("w-[260px] text-white h-[450px]")}>
+      <CardHeader className="flex flex-row justify-between">
+        <CardTitle> #{String(data.tokenId)}</CardTitle>
+        <div className="flex items-center space-x-2">
+          <Checkbox className="text-white border-white" id="terms" onCheckedChange={valueChange} />
+          <label
+            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            勾选
+          </label>
+        </div>
       </CardHeader>
       <CardContent className="grid gap-4">
 
@@ -39,7 +48,7 @@ export function NFTCard({ data }: ICardProp) {
           >
             <span className="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500" />
             <div className="space-y-1">
-              <p className="text-sm text-muted-foreground text-white">
+              <p className="text-sm text-muted-foreground">
                 等级: {data.level}
               </p>
             </div>
@@ -49,7 +58,7 @@ export function NFTCard({ data }: ICardProp) {
           >
             <span className="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500" />
             <div className="space-y-1">
-              <p className="text-sm text-muted-foreground text-white">
+              <p className="text-sm text-muted-foreground">
                 fatherId: {String(data.faId)}
               </p>
             </div>
@@ -59,7 +68,7 @@ export function NFTCard({ data }: ICardProp) {
           >
             <span className="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500" />
             <div className="space-y-1">
-              <p className="text-sm text-muted-foreground text-white">
+              <p className="text-sm text-muted-foreground">
                 motherId: {String(data.moId)}
               </p>
             </div>
@@ -69,7 +78,7 @@ export function NFTCard({ data }: ICardProp) {
           >
             <span className="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500" />
             <div className="space-y-1">
-              <p className="text-sm text-muted-foreground text-white">
+              <p className="text-sm text-muted-foreground">
                 拥有者：{resetAddress(data.owner)}
               </p>
             </div>

@@ -9,6 +9,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { Toaster } from "@/components/ui/toaster"
 import Header from "@/components/header/header";
 import WagmiConfigProvider from "@/utils/WagmiConfigProvider";
 const inter = Inter({ subsets: ["latin"] });
@@ -32,6 +33,7 @@ export default function RootLayout({
             {children}
           </WagmiConfigProvider>
         </main>
+        <Toaster />
       </body>
     </html>
   );

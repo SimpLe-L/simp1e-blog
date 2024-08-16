@@ -9,25 +9,22 @@ const menuList = [
         path: "/dapp",
       },
       {
+        title: "NFT",
+        path: "/dapp/nft",
+      },
+      {
+        title: "质押挖矿",
+        path: "/dapp/staking",
+      },
+      {
         title: "投票",
         path: "/dapp/vote",
       },
       {
         title: "众筹",
         path: "/dapp/rowdfunding",
-      },
-      {
-        title: "NFT Market",
-        path: "/dapp/nft",
-      },
-      {
-        title: "ERC20代币",
-        path: "/dapp/erc20",
-      },
-      {
-        title: "质押挖矿",
-        path: "/dapp/staking",
       }
+
     ]
   }
 ]
