@@ -17,14 +17,9 @@ const menuList = [
         path: "/dapp/staking",
       },
       {
-        title: "投票",
-        path: "/dapp/vote",
+        title: "solana发币",
+        path: "/dapp/solana",
       },
-      {
-        title: "众筹",
-        path: "/dapp/rowdfunding",
-      }
-
     ]
   }
 ]

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils"
 import {
   Card,
@@ -40,6 +41,7 @@ export function NFTCard({ data, handleNftCheck }: ICardProp) {
             width={210}
             height={210}
           />
+          {/* <Image src="https://raw.githubusercontent.com/SimpLe-L/simp1e-blog/main/public/donkeys/0/images/3.png" alt="NFT" width={210} height={210}></Image> */}
         </div>
 
         <div>
