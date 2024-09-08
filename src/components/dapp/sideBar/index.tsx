@@ -20,6 +20,10 @@ const menuList = [
         title: "solana发币",
         path: "/dapp/solana",
       },
+      {
+        title: "众筹",
+        path: "/dapp/crowdfunding",
+      },
     ]
   }
 ]

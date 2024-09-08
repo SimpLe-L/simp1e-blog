@@ -37,3 +37,18 @@ html {
   background-color: rgba(125, 125, 125, 0.12);
   -webkit-border-radius: 6px;
 }
+
+.custum-file-upload {
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  border: 2px dashed #e8e8e8;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custum-file-upload input {
+  display: none;
+}

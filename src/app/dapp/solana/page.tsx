@@ -5,7 +5,7 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 import { ContextProvider } from "./contexts/ContextProvider";
 import CreateToken from "./components/CreateToken"
 import TokenInfo from "./components/TokenInfo"
-import CombineFun from "./components/TokenInfo"
+import CombineFun from "./components/CombineFun"
 
 const SolanaToken = () => {
   return (
@@ -18,10 +18,10 @@ const SolanaToken = () => {
           <div className="w-[260px] h-fit rounded-md border border-[#adadad] p-1">
             <CreateToken />
           </div>
-          <div className="w-[260px] h-fit rounded-md border border-[#adadad]">
+          <div className="w-[260px] h-fit rounded-md border border-[#adadad] p-1">
             <TokenInfo />
           </div>
-          <div className="w-[260px] h-fit rounded-md border border-[#adadad]">
+          <div className="w-[260px] h-fit rounded-md border border-[#adadad] p-1">
             <CombineFun />
           </div>
         </div>

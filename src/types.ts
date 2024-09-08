@@ -20,3 +20,10 @@ export interface INftProperties {
   moId: bigint;
   uri: string;
 }
+
+
+export interface IResponse {
+  IpfsHash: string;
+  PinSize: number;
+  Timestamp: string;
+}
