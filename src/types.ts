@@ -27,3 +27,42 @@ export interface IResponse {
   PinSize: number;
   Timestamp: string;
 }
+
+export type campaignResArr = {
+  owner: `0x${string}`;
+  title: string;
+  description: string;
+  target: string;
+  deadline: number;
+  amountCollected: string;
+  image: string;
+  pId: number;
+}[] | []
+
+export type campaignRes = {
+  owner: `0x${string}`;
+  title: string;
+  description: string;
+  target: string;
+  deadline: number;
+  amountCollected: string;
+  image: string;
+  pId: number;
+}
+
+export type CampaignWithoutId = Omit<campaignRes, 'pId'> & {
+  // 添加点击函数
+  // handleNavigate: (campaign: campaignRes) => void;
+  handleClick: any;
+};
+
+export type DonationsArr = {
+  donator: `0x${string}`;
+  donation: string;
+}[] | []
+
+export type DonationRes = {
+  donator: `0x${string}`;
+  donation: string;
+}
+

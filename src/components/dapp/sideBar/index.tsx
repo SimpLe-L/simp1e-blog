@@ -22,7 +22,7 @@ const menuList = [
       },
       {
         title: "众筹",
-        path: "/dapp/crowdfunding",
+        path: "/dapp/crowdfunding/list",
       },
     ]
   }

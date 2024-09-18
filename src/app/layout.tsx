@@ -11,7 +11,8 @@ import "./globals.css";
 
 import { Toaster } from "@/components/ui/toaster"
 import Header from "@/components/header/header";
-import WagmiConfigProvider from "@/utils/WagmiConfigProvider";
+import WagmiConfigProvider from "@/contexts/WagmiConfigProvider";
+import { StateContextProvider } from '@/contexts/CrowdFundingContext';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -30,7 +31,9 @@ export default function RootLayout({
         <Header />
         <main>
           <WagmiConfigProvider>
-            {children}
+            <StateContextProvider>
+              {children}
+            </StateContextProvider>
           </WagmiConfigProvider>
         </main>
         <Toaster />

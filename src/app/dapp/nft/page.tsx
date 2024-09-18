@@ -3,7 +3,7 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount, useWriteContract, useReadContract, useSimulateContract } from 'wagmi';
 import { NftAbi } from "~/nft";
-import { contractAddress } from './configs';
+import { contractAddress } from '@/configs';
 import { useEffect, useState } from 'react';
 
 import { NFTCard } from './NFT';
